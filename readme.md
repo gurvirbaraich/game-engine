@@ -3,7 +3,7 @@ Pixel2D is a 2D game engine built in TypeScript. It provides an easy-to-use and 
 
 ## Getting Started
 1. Clone the repository:
-    ```bash
+    ```
     $ git clone https://github.com/gurvirbaraich/game-engine.git
     $ cd game-engine
    ```
