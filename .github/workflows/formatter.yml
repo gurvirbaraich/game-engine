@@ -1,0 +1,20 @@
+name: Pixel2D Formatter
+on: [push]
+
+jobs:
+  build:
+    name: Pixel2D Formatter
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: bahmutov/npm-install@v1
+
+      - run: npm run github:format
+      - run: git status
+
+      - uses: gurvirbaraich/publish-to-github-action@master
+        env:
+          BRANCH_NAME: 'main'
+          COMMIT_MESSAGE: "Formatted: "
+          GITHUB_TOKEN: ${{ secrets._GITHUB_TOKEN }}
