@@ -9,12 +9,12 @@ import World from "@/lib/World";
 import Engine from "@/lib/Engine";
 
 export default class Linker {
-    public static initialize() {
-        const world = new World();
-        const engine = new Engine();
+  public static initialize() {
+    const world = new World();
+    const engine = new Engine();
 
-        engine.update();
-    }
+    engine.update();
+  }
 }
 
-Linker.initialize()
+Linker.initialize();
