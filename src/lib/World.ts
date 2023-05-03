@@ -42,4 +42,28 @@ export default class World {
     World.canvas.width = 800;
     World.canvas.height = 600;
   }
+
+  /**
+ * Attaches an array of WebGLShader objects to a WebGLProgram object.
+ * 
+ * @param program - The WebGLProgram object to which the shaders should be attached.
+ * @param shaders - An array of WebGLShader objects to be attached.
+ */
+public static attachShaders(program: WebGLProgram, ...shaders: WebGLShader[]) {
+  // Map over each shader and attach it to the program
+  shaders.map((shader: WebGLShader) => {
+    World.GL.attachShader(program, shader)
+  });
+}
+
+/**
+* Links a WebGLProgram object after attaching the WebGLShader objects.
+* 
+* @param program - The WebGLProgram object to be linked.
+*/
+public static linkProgram(program: WebGLProgram) {
+  // Links the WebGLProgram object after the shaders have been attached
+  World.GL.linkProgram(program)
+}
+
 }
