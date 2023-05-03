@@ -17,11 +17,15 @@ export default class Engine {
     // Set the clear color for the WebGL context to light blue
     World.GL.clearColor(0.4, 0.6, 1.0, 0.9);
 
-    const vertexShader: WebGLShader = World.GL.createShader(World.GL.VERTEX_SHADER);
+    const vertexShader: WebGLShader = World.GL.createShader(
+      World.GL.VERTEX_SHADER
+    );
     World.GL.shaderSource(vertexShader, vertexShaderSource);
     World.GL.compileShader(vertexShader);
 
-    const fragmentShader: WebGLShader = World.GL.createShader(World.GL.FRAGMENT_SHADER);
+    const fragmentShader: WebGLShader = World.GL.createShader(
+      World.GL.FRAGMENT_SHADER
+    );
     World.GL.shaderSource(fragmentShader, fragmentShaderSource);
     World.GL.compileShader(fragmentShader);
 

@@ -45,12 +45,7 @@ const vertexBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
 // Define the vertices of the rectangle
-const vertices = [
-    -0.5, -0.5,
-     0.5, -0.5,
-     0.5,  0.5,
-    -0.5,  0.5,
-];
+const vertices = [-0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5];
 
 // Set the vertex buffer data
 gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
@@ -60,13 +55,14 @@ const indexBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
 
 // Define the indices of the rectangle
-const indices = [
-    0, 1, 2,
-    2, 3, 0,
-];
+const indices = [0, 1, 2, 2, 3, 0];
 
 // Set the index buffer data
-gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(indices), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ELEMENT_ARRAY_BUFFER,
+  new Uint16Array(indices),
+  gl.STATIC_DRAW
+);
 
 // Set the viewport
 gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
