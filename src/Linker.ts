@@ -7,13 +7,14 @@
  */
 import World from "@/lib/World";
 import Engine from "@/lib/Engine";
+import * as Utils from "@/lib/helpers";
 
 export default class Linker {
   public static initialize() {
     const world = new World();
     const engine = new Engine();
 
-    engine.update();
+    // requestAnimationFrame(Utils.middleware.FPS(30, engine.update))
   }
 }
 

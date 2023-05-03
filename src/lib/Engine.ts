@@ -17,20 +17,34 @@ export default class Engine {
     // Set the clear color for the WebGL context to light blue
     World.GL.clearColor(0.4, 0.6, 1.0, 0.9);
 
+    // Create a new vertex shader
     const vertexShader: WebGLShader = World.GL.createShader(
       World.GL.VERTEX_SHADER
     );
+
+    // Set the source code for the vertex shader
     World.GL.shaderSource(vertexShader, vertexShaderSource);
+
+    // Compile the vertex shader
     World.GL.compileShader(vertexShader);
 
+    // Create a new fragment shader
     const fragmentShader: WebGLShader = World.GL.createShader(
       World.GL.FRAGMENT_SHADER
     );
+
+    // Set the source code for the fragment shader
     World.GL.shaderSource(fragmentShader, fragmentShaderSource);
+
+    // Compile the fragment shader
     World.GL.compileShader(fragmentShader);
 
+    // Attach the shaders to the program
     World.attachShaders(World.PROGRAM, vertexShader, fragmentShader);
+
+    // Link the program with the attached shaders
     World.linkProgram(World.PROGRAM);
+
   }
 
   /**
@@ -55,8 +69,5 @@ export default class Engine {
 
     // Flush the WebGL context to ensure that all the previous draw calls have been processed
     World.GL.flush();
-
-    // Request the next animation frame, that will call the update method again
-    requestAnimationFrame(() => this.update());
   }
 }
