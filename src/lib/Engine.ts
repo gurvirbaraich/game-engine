@@ -44,7 +44,6 @@ export default class Engine {
 
     // Link the program with the attached shaders
     World.linkProgram(World.PROGRAM);
-
   }
 
   /**
