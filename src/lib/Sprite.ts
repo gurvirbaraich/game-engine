@@ -8,6 +8,9 @@ import { Vector2 } from "@/interfaces";
 
 export default class Sprite {
   constructor(position: Vector2, shape: Shapes) {
-    const positionLocation: number = World.GL.getAttribLocation(World.PROGRAM, "aPosition");
+    const positionLocation: number = World.GL.getAttribLocation(
+      World.PROGRAM,
+      "aPosition"
+    );
   }
 }

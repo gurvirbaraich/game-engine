@@ -15,9 +15,9 @@ export default class Linker {
     const world = new World();
     const engine = new Engine();
 
-    const sprite = new Sprite(vec2(5, 10))
+    const sprite = new Sprite(vec2(5, 10));
 
-    requestAnimationFrame(engine.update)
+    requestAnimationFrame(engine.update);
   }
 }
 

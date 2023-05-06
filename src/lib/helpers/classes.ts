@@ -17,9 +17,9 @@ export class Vec2 implements Vector2 {
 
   /**
    * Creates a new Vec2 object with the given x and y coordinates
-   * 
-   * @param {number} x 
-   * @param {number} y 
+   *
+   * @param {number} x
+   * @param {number} y
    */
   constructor(x: number, y: number) {
     this.x = x;
