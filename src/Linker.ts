@@ -7,14 +7,17 @@
  */
 import World from "@/lib/World";
 import Engine from "@/lib/Engine";
-import * as Utils from "@/lib/helpers";
+import Sprite from "@/lib/Sprite";
+import { vec2 } from "@/lib/helpers/functions";
 
 export default class Linker {
   public static initialize() {
     const world = new World();
     const engine = new Engine();
 
-    // requestAnimationFrame(Utils.middleware.FPS(30, engine.update))
+    const sprite = new Sprite(vec2(5, 10))
+
+    requestAnimationFrame(engine.update)
   }
 }
 
